@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog do Roblox</title>
     <style>
-   header {
-         background-color:#D6CB8F;
-         color: #EFCB00;
-         text-align: center;
-         max-width: 800px;
-         margin: 0 auto;
-}
-  main {
-         background-color: #D6CB8F;
-         color:#EFCB00;
-         max-width: 800px;
-         margin: 0 auto;
-         padding: 16px;
-         display: flex;
-}
-  img{
-         width: 80px;
-         height: 80px;
-}
-  p{ font-weight: bold;
-  }
-</style>
-</head>
-<body>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e5e5e5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-<header>
-         <h1>Meu blog do roblox</h1>
-         <p>Vou compartilhar informações sobre o roblox</p>
-</header> <main> <article>
-<img src="https://images.rbxcdn.com/95465ef3df0498b826f04b2b3da067d2.png" alt="Logotipo Oficial do Roblox">
-<div>
-<h2>Meu primeiro post</h2>
-<p class="artigo-autor">Por: Murilo Rodrigues Pereira </p>
-<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas historias, acontecimentos e lendas do jogo roblox. </p>
-<button>❤️<span>0</span></button>
-<button>👍<span>0</span></button>
-</div>
-</article>
+        /* Cabeçalho */
+        header {
+            background-color: #232527; /* Cor escura estilo Roblox */
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 5px solid #00a2ff; /* Detalhe em azul */
+        }
 
-<article>
-<img src="https://images.rbxcdn.com/c40bf01fb2e3d7a8c4c7f0b093f4122d.png" alt="Avatar clássico do Noob do Roblox">
-<div>
-<h2>Lendas do Jogo: O Noob</h2>
-<p class="artigo-autor">Por: Murilo Rodrigues Pereira </p>
-<p>Você sabia que o visual clássico do Noob (corpo amarelo, camisa azul e calça verde) virou um dos maiores símbolos da história do jogo?</p>
-<button>❤️<span>0</span></button>
-<button>👍<span>0</span></button>
-</div>
-</article>
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
 
-<article>
-<img src="https://images.rbxcdn.com/83c8466b04b407e7b51b3d5b24f5a34e.png" alt="Moeda virtual Robux">
-<div>
-<h2>Melhores Mapas</h2>
-<p class="artigo-autor">Por: Murilo Rodrigues Pereira </p>
-<p>No próximo post, vou trazer uma lista secreta com os melhores mapas para você explorar e se divertir com seus amigos!</p>
-<button>❤️<span>0</span></button>
-<button>👍<span>0</span></button>
-</div>
-</article>
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            font-weight: normal;
+        }
 
-</main>
- </body>
- </html>
+        /* Principal */
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* Espaço entre os artigos */
+        }
+
+        /* Artigos/Posts */
+        article {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Responsividade para telas maiores: imagem do lado do texto */
+        @media (min-width: 600px) {
+            article {
+                flex-direction: row;
+            }
+        }
+
+        /* Imagens dos artigos */
+        article img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Conteúdo dos Textos */
+        .conteudo {
+            flex: 1;
+        }
+
+        .conteudo h2 {
+            margin-top: 0;
+            color: #232527;
+        }
+
+        .artigo-autor {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .conteudo p {
+            line-height: 1.6;
+        }
